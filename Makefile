@@ -26,6 +26,9 @@ endef
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
 	$(CP) ./src/* $(PKG_BUILD_DIR)/
+	chmod +x $(PKG_BUILD_DIR)/configure
+	$(PKG_BUILD_DIR)/configure
+	
 endef
 
 #Specify where and how to install the program.
